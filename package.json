@@ -1,0 +1,30 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "build-list-rut": "cd nova-components/ListRut && npm run dev",
+        "build-list-rut-prod": "cd nova-components/ListRut && npm run prod",
+        "build-nova-push-notification": "cd nova-components/NovaPushNotification && npm run dev",
+        "build-nova-push-notification-prod": "cd nova-components/NovaPushNotification && npm run prod"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.2.3",
+        "axios": "^1.1.2",
+        "cross-env": "^5.1",
+        "laravel-mix": "^4.0.7",
+        "laravel-vite-plugin": "^0.7.5",
+        "lodash": "^4.17.13",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vite": "^4.0.0",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "material-design-icons": "^3.0.1",
+        "vue": "^3.2.25"
+    }
+}
