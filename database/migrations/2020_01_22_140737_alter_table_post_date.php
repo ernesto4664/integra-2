@@ -14,7 +14,8 @@ class AlterTablePostDate extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dateTime('datetime')->change();
+            $table->renameColumn('oldColumnName', 'newColumnName');  // Cambiar nombre de columna
+            $table->string('existingColumnName', 255)->change();     // Cambiar atributos de columna
         });
     }
 
