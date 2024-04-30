@@ -27,8 +27,10 @@ class AddCodeTableDistrcits extends Migration
      */
     public function down()
     {
-        Schema::table('districts', function (Blueprint $table) {
-            $table->drop('code');
+        Schema::table('districts', function ($table) {
+            if (!Schema::hasColumn('districts', 'code')) {
+                $table->string('code')->nullable();
+            }
         });
     }
 }
