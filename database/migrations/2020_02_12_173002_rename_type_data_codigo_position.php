@@ -14,7 +14,9 @@ class RenameTypeDataCodigoPosition extends Migration
     public function up()
     {
         Schema::table('positions', function (Blueprint $table) {
-            $table->renameColumn('codigo', 'code');
+            if (Schema::hasColumn('positions', 'codigo')) {
+                // Realiza las operaciones necesarias
+            }
         });
     }
 
