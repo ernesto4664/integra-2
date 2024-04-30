@@ -14,7 +14,7 @@ class AddDistrictIdReleases extends Migration
     public function up()
     {
         Schema::table('releases', function (Blueprint $table) {
-            $table->dateTime('datetime')->change();
+            $table->dateTime('datetime')->nullable();
             $table->unsignedBigInteger('district_id')->nullable();
             $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');;
         });
